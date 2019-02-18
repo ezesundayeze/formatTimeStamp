@@ -1,6 +1,6 @@
 {
-  "name": "format-date-time",
-  "version": "1.0.0",
+  "name": "simple-datetime-formater",
+  "version": "1.0.5",
   "description": "Convert time stamp to human readable date and time",
   "main": "index.js",
   "scripts": {

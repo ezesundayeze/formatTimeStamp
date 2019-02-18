@@ -36,10 +36,12 @@ module.exports.formatTime = timestamp => {
     if (hours >= 13) {
       hours = hours - 12;
       return `${hours}:${minutes}:${seconds} PM`;
-    } else if (hours == 12) {
+    } else if (hours === 12) {
       return `${hours}:${minutes}:${seconds} PM`;
-    } else {
+    } else if (hours === 24) {
       return `${12}:${minutes}:${seconds} AM`;
+    } else {
+      return `${hours}:${minutes}:${seconds} AM`;
     }
   };
 
