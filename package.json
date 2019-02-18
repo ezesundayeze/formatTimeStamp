@@ -1,19 +1,23 @@
 {
-  "name": "timestamp",
+  "name": "format-date-time",
   "version": "1.0.0",
-  "description": "Convert time stamp to human readable date",
+  "description": "Convert time stamp to human readable date and time",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rexeze/formatTimeStamp.git"
   },
-  "author": "",
+  "author": "Eze Sunday Eze",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rexeze/formatTimeStamp/issues"
   },
-  "homepage": "https://github.com/rexeze/formatTimeStamp#readme"
+  "homepage": "https://github.com/rexeze/formatTimeStamp#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
 }
