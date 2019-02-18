@@ -4,7 +4,9 @@ size: 1kb
 
 Something I use all the time and don't want to repeat it all the time.
 
-to formate _Date_ simply
+Usage:
+
+Format _Date:_
 
 ```javascript
 const simpleDatetimeFormater = require("simple-datetime-formater"
@@ -13,7 +15,7 @@ simpleDateTimeFormater.formatDate(timestamp)
 
 ```
 
-or formate _Time_
+Format _Time:_
 
 ```javascript
 const simpleDatetimeFormater = require("simple-datetime-formater"
@@ -22,7 +24,7 @@ simpleDateTimeFormater.formatTime(timestamp)
 
 ```
 
-timestamp parameter is optional. You can use it when necessary.
+`timestamp` parameter is optional. You can use it when necessary.
 
 timeago
 
