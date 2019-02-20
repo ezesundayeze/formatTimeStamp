@@ -55,25 +55,42 @@ module.exports.formatTime = timestamp => {
 };
 
 module.exports.formatDate = (timestamp, seperator) => {
-  if (timestamp) {
-    //Convert the value from seconds to milliseconds by multiplying it to 1000
-    this.date = new Date(timestamp * 1000);
+  if (typeof timestamp === Number) {
+    let currentDate;
+    let thisMonth;
+    let today;
+    var todayDate;
+
+    if (timestamp) {
+      //Convert the value from seconds to milliseconds by multiplying it to 1000
+      this.date = new Date(timestamp * 1000);
+    } else {
+      this.date = new Date();
+    }
+    today = days[this.date.getDay()];
+    thisMonth = months[this.date.getMonth()];
+
+    currentDate = `${today}, ${thisMonth} ${this.date.getFullYear()}`;
+    return currentDate;
   } else {
-    this.date = new Date();
+    today = days[this.date.getDay()];
+    thisMonth = months[this.date.getMonth()];
+    todayDate = this.date.getDate();
+    currentDate = `${today}, ${todayDate} ${thisMonth} ${this.date.getFullYear()}`;
+    return currentDate;
   }
-  let today = days[this.date.getDay()];
-  let thisMonth = months[this.date.getMonth()];
-
-  let currentDate = `${today}, ${thisMonth} ${this.date.getFullYear()}`;
-
-  return currentDate;
 };
 
 module.exports.formatTimeAgo = timestamp => {
-  var date = new Date(); // Gets the current time
+  var date = new Date();
 
   var timeStampNow = Math.floor(date.getTime() / 1000);
-  var seconds = timeStampNow - timestamp;
+  var seconds;
+  if (/[a-z]/i.test(timestamp)) {
+    seconds = timeStampNow - Date.parse(timestamp) / 1000;
+  } else {
+    seconds = timeStampNow - timestamp / 1000;
+  }
 
   // more that two days
   if (seconds > 2 * 24 * 3600) {
