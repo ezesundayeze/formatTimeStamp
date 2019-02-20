@@ -35,7 +35,11 @@ simpleDateTimeFormater.formatTimeAgo(timestamp)
 
 ```
 
+to use this package over in the frontend here is the cdn:
 
+```html
+<script src="https://cdn.jsdelivr.net/gh/rexeze/formatTimeStamp/src/index-cdn.js"></script>
+```
 
 In timeago you must put a time stamp or ISO time string.
 
