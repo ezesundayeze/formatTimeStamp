@@ -113,6 +113,6 @@ var formatTimeAgo = timestamp => {
     return Math.floor(seconds / 60) + " minutes ago";
   }
   if (seconds < 60) {
-    return Math.floor(seconds) + " seconds ago";
+    return "few seconds ago";
   }
 };
